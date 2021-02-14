@@ -20,12 +20,17 @@ const secondsHand = document.querySelector('.clock-s');
 const monthDate = document.querySelector('.clock-md');
 const day = document.querySelector('.clock-d');
 
+// let monthsArray = new Array();
+// let DaysArray = new Array();
+let monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', ]
+let DaysArray = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat',];
+
 function Clock() {
     let now = new Date();
     let h = now.getHours();
     let m = now.getMinutes();
     let s = now.getSeconds();
-    let mth = now.getMonth()+1;
+    let mth = now.getMonth();
     let d = now.getDate();
     let dy = now.getDay();
     
@@ -40,8 +45,8 @@ function Clock() {
     minutesHand.style.transform = `rotate(${mAngle}deg)`;
     hoursHand.style.transform = `rotate(${hAngle}deg)`;
 
-    monthDate.textContent = `${mth} ${d}`;
-    day.textContent = `${dy}`;
+    monthDate.textContent = `${monthsArray[mth]} ${d}`;
+    day.textContent = `${DaysArray[dy]}`;
     
     setTimeout(Clock, 500);
 }

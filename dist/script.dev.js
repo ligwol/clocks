@@ -19,14 +19,18 @@ var hoursHand = document.querySelector('.clock-h');
 var minutesHand = document.querySelector('.clock-m');
 var secondsHand = document.querySelector('.clock-s');
 var monthDate = document.querySelector('.clock-md');
-var day = document.querySelector('.clock-d');
+var day = document.querySelector('.clock-d'); // let monthsArray = new Array();
+// let DaysArray = new Array();
+
+var monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+var DaysArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 function Clock() {
   var now = new Date();
   var h = now.getHours();
   var m = now.getMinutes();
   var s = now.getSeconds();
-  var mth = now.getMonth() + 1;
+  var mth = now.getMonth();
   var d = now.getDate();
   var dy = now.getDay();
   console.log(now);
@@ -36,8 +40,8 @@ function Clock() {
   secondsHand.style.transform = "rotate(".concat(sAngle, "deg)");
   minutesHand.style.transform = "rotate(".concat(mAngle, "deg)");
   hoursHand.style.transform = "rotate(".concat(hAngle, "deg)");
-  monthDate.textContent = "".concat(mth, " ").concat(d);
-  day.textContent = "".concat(dy);
+  monthDate.textContent = "".concat(monthsArray[mth], " ").concat(d);
+  day.textContent = "".concat(DaysArray[dy]);
   setTimeout(Clock, 500);
 }
 
