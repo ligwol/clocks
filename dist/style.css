@@ -1,0 +1,73 @@
+body {
+  margin: 0 auto;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #c4c4c4;
+}
+
+#clock-1 {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 500px;
+  height: 100px;
+  background-color: #fff;
+  font-size: 5em;
+  text-align: center;
+  border-radius: 30px;
+}
+
+#clock-2 {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 500px;
+  height: 500px;
+  border-radius: 100%;
+  background: #fff url(/face.png) center center;
+  background-size: cover;
+  box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+#clock-2 .clock-h {
+  position: absolute;
+  width: 8px;
+  height: 120px;
+  background-color: #111111;
+  top: calc(50% - 100px);
+  left: calc(50% - 4px);
+  transform-origin: 50% 100px;
+  z-index: 3;
+}
+#clock-2 .clock-m {
+  position: absolute;
+  width: 5px;
+  height: 180px;
+  background-color: #111;
+  top: calc(50% - 160px);
+  left: calc(50% - 3px);
+  transform-origin: 50% 160px;
+  z-index: 2;
+}
+#clock-2 .clock-s {
+  position: absolute;
+  width: 3px;
+  height: 220px;
+  background-color: #11111152;
+  top: calc(50% - 200px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 200px;
+  z-index: 3;
+}
+#clock-2 .clock-md {
+  position: absolute;
+  top: 65%;
+  left: 45%;
+  font-family: Helvetica;
+  font-size: 2rem;
+}
+#clock-2 .clock-d {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  font-family: Helvetica;
+  font-size: 2rem;
+}
