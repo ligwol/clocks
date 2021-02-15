@@ -48,7 +48,7 @@ let DaysArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', ];
 
 function WriteTimeNY() {
     let now = new Date();
-    let h = now.getUTCHours()-5;
+    let h = now.getUTCHours() - 5;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -61,27 +61,23 @@ WriteTimeNY();
 
 function ClockNY() {
     let now = new Date();
-    let h = now.getUTCHours()-5;
+    let h = now.getUTCHours() - 5;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth, dt, dy;
-    if(h>=24){
-        dt = now.getUTCDate()+1;
-        dy = now.getUTCDay()+1;
-        mth = now.getUTCMonth();
-        if (mth<7){
-            if((mth%2)==0){
-                mth = mth + 1;
-            }
-        } else if(math%=!0){
-            mth = mth + 1;
-        }
-    } else{
+    if (h < 5) {
+        dt = now.getUTCDate() - 1;
+        dy = now.getUTCDay() - 1;
+        if (dt = 1) {
+            mth = now.getUTCMonth() - 1;
+        } else mth = now.getUTCMonth();
+
+    } else {
         mth = now.getUTCMonth();
         dt = now.getUTCDate();
         dy = now.getUTCDay();
     }
-    
+
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
@@ -119,11 +115,11 @@ function ClockLnd() {
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth, dt, dy;
-    if(h>=24){
-        mth = now.getUTCMonth()+1;
-        dt = now.getUTCDate()+1;
-        dy = now.getUTCDay()+1;
-    } else{
+    if (h >= 24) {
+        mth = now.getUTCMonth() + 1;
+        dt = now.getUTCDate() + 1;
+        dy = now.getUTCDay() + 1;
+    } else {
         mth = now.getUTCMonth();
         dt = now.getUTCDate();
         dy = now.getUTCDay();
@@ -147,7 +143,7 @@ ClockLnd();
 
 function WriteTimeRdJ() {
     let now = new Date();
-    let h = (now.getUTCHours()-3)%24;
+    let h = (now.getUTCHours() - 3) % 24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -160,22 +156,18 @@ WriteTimeRdJ();
 
 function ClockRdJ() {
     let now = new Date();
-    let h = now.getUTCHours()-3;
+    let h = now.getUTCHours() - 3;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth, dt, dy;
-    if(h>=24){
-        dt = now.getUTCDate()+1;
-        dy = now.getUTCDay()+1;
-        mth = now.getUTCMonth();
-        if (mth<7){
-            if((mth%2)==0){
-                mth = mth + 1;
-            }
-        } else if(math%=!0){
-            mth = mth + 1;
-        }
-    } else{
+    if (h < 3) {
+        dt = now.getUTCDate() - 1;
+        dy = now.getUTCDay() - 1;
+        if (dt = 1) {
+            mth = now.getUTCMonth() - 1;
+        } else mth = now.getUTCMonth();
+
+    } else {
         mth = now.getUTCMonth();
         dt = now.getUTCDate();
         dy = now.getUTCDay();
@@ -212,22 +204,25 @@ WriteTimeMsc();
 
 function ClockMsc() {
     let now = new Date();
-    let h = now.getUTCHours()+3;
+    let h = now.getUTCHours() + 3;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth, dt, dy;
-    if(h>=24){
-        dt = now.getUTCDate()+1;
-        dy = now.getUTCDay()+1;
+    if (h >= 24) {
+        dt = now.getUTCDate() + 1;
+        dy = now.getUTCDay() + 1;
         mth = now.getUTCMonth();
-        if (mth<7){
-            if((mth%2)==0){
-                mth = mth + 1;
+        if (mth < 7) {
+            if ((mth % 2) == 0) {
+                if (dt == 31) mth = mth + 1;
+                if (mth == 1) {
+                    if (dt == 28) mth = mth + 1;
+                }
+            } else if (math %= !0) {
+                if (dt == 30) mth = mth + 1;
             }
-        } else if(math%=!0){
-            mth = mth + 1;
         }
-    } else{
+    } else {
         mth = now.getUTCMonth();
         dt = now.getUTCDate();
         dy = now.getUTCDay();
@@ -251,7 +246,7 @@ ClockMsc();
 
 function WriteTimeTky() {
     let now = new Date();
-    let h = (now.getUTCHours()+9)%24;
+    let h = (now.getUTCHours() + 9) % 24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -264,22 +259,25 @@ WriteTimeTky();
 
 function ClockTky() {
     let now = new Date();
-    let h = now.getUTCHours()+9;
+    let h = now.getUTCHours() + 9;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth, dt, dy;
-    if(h>=24){
-        dt = now.getUTCDate()+1;
-        dy = now.getUTCDay()+1;
+    if (h >= 24) {
+        dt = now.getUTCDate() + 1;
+        dy = now.getUTCDay() + 1;
         mth = now.getUTCMonth();
-        if (mth<7){
-            if((mth%2)==0){
-                mth = mth + 1;
+        if (mth < 7) {
+            if ((mth % 2) == 0) {
+                if (dt == 31) mth = mth + 1;
+                if (mth == 1) {
+                    if (dt == 28) mth = mth + 1;
+                }
+            } else if (math %= !0) {
+                if (dt == 30) mth = mth + 1;
             }
-        } else if(math%=!0){
-            mth = mth + 1;
         }
-    } else{
+    } else {
         mth = now.getUTCMonth();
         dt = now.getUTCDate();
         dy = now.getUTCDay();
@@ -303,7 +301,7 @@ ClockTky();
 
 function WriteTimeSyd() {
     let now = new Date();
-    let h = (now.getUTCHours()+10)%24;
+    let h = (now.getUTCHours() + 10) % 24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -316,22 +314,25 @@ WriteTimeSyd();
 
 function ClockSyd() {
     let now = new Date();
-    let h = now.getUTCHours()+10;
+    let h = now.getUTCHours() + 10;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth, dt, dy;
-    if(h>=24){
-        dt = now.getUTCDate()+1;
-        dy = now.getUTCDay()+1;
+    if (h >= 24) {
+        dt = now.getUTCDate() + 1;
+        dy = now.getUTCDay() + 1;
         mth = now.getUTCMonth();
-        if (mth<7){
-            if((mth%2)==0){
-                mth = mth + 1;
+        if (mth < 7) {
+            if ((mth % 2) == 0) {
+                if (dt == 31) mth = mth + 1;
+                if (mth == 1) {
+                    if (dt == 28) mth = mth + 1;
+                }
+            } else if (math %= !0) {
+                if (dt == 30) mth = mth + 1;
             }
-        } else if(math%=!0){
-            mth = mth + 1;
         }
-    } else{
+    } else {
         mth = now.getUTCMonth();
         dt = now.getUTCDate();
         dy = now.getUTCDay();

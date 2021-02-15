@@ -61,18 +61,13 @@ function ClockNY() {
   var s = now.getUTCSeconds();
   var mth, dt, dy;
 
-  if (h >= 24) {
-    dt = now.getUTCDate() + 1;
-    dy = now.getUTCDay() + 1;
-    mth = now.getUTCMonth();
+  if (h < 5) {
+    dt = now.getUTCDate() - 1;
+    dy = now.getUTCDay() - 1;
 
-    if (mth < 7) {
-      if (mth % 2 == 0) {
-        mth = mth + 1;
-      }
-    } else if (math %= !0) {
-      mth = mth + 1;
-    }
+    if (dt = 1) {
+      mth = now.getUTCMonth() - 1;
+    } else mth = now.getUTCMonth();
   } else {
     mth = now.getUTCMonth();
     dt = now.getUTCDate();
@@ -159,18 +154,13 @@ function ClockRdJ() {
   var s = now.getUTCSeconds();
   var mth, dt, dy;
 
-  if (h >= 24) {
-    dt = now.getUTCDate() + 1;
-    dy = now.getUTCDay() + 1;
-    mth = now.getUTCMonth();
+  if (h < 3) {
+    dt = now.getUTCDate() - 1;
+    dy = now.getUTCDay() - 1;
 
-    if (mth < 7) {
-      if (mth % 2 == 0) {
-        mth = mth + 1;
-      }
-    } else if (math %= !0) {
-      mth = mth + 1;
-    }
+    if (dt = 1) {
+      mth = now.getUTCMonth() - 1;
+    } else mth = now.getUTCMonth();
   } else {
     mth = now.getUTCMonth();
     dt = now.getUTCDate();
@@ -219,10 +209,14 @@ function ClockMsc() {
 
     if (mth < 7) {
       if (mth % 2 == 0) {
-        mth = mth + 1;
+        if (dt == 31) mth = mth + 1;
+
+        if (mth == 1) {
+          if (dt == 28) mth = mth + 1;
+        }
+      } else if (math %= !0) {
+        if (dt == 30) mth = mth + 1;
       }
-    } else if (math %= !0) {
-      mth = mth + 1;
     }
   } else {
     mth = now.getUTCMonth();
@@ -272,10 +266,14 @@ function ClockTky() {
 
     if (mth < 7) {
       if (mth % 2 == 0) {
-        mth = mth + 1;
+        if (dt == 31) mth = mth + 1;
+
+        if (mth == 1) {
+          if (dt == 28) mth = mth + 1;
+        }
+      } else if (math %= !0) {
+        if (dt == 30) mth = mth + 1;
       }
-    } else if (math %= !0) {
-      mth = mth + 1;
     }
   } else {
     mth = now.getUTCMonth();
@@ -325,10 +323,14 @@ function ClockSyd() {
 
     if (mth < 7) {
       if (mth % 2 == 0) {
-        mth = mth + 1;
+        if (dt == 31) mth = mth + 1;
+
+        if (mth == 1) {
+          if (dt == 28) mth = mth + 1;
+        }
+      } else if (math %= !0) {
+        if (dt == 30) mth = mth + 1;
       }
-    } else if (math %= !0) {
-      mth = mth + 1;
     }
   } else {
     mth = now.getUTCMonth();
