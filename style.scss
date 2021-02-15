@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 $hourHandWidth: 10px;
 $hourHandHeight: 80px;
 $minHandWidth: 8px;
@@ -10,9 +13,10 @@ $colorCenter: #c91414;
 
 body {
     margin: 0 auto;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Kanit, Helvetica, sans-serif;
     background-color: $colorBgc;
     width: 100wh;
+    color: $colorBorder;
 }
 
 .main {
@@ -21,8 +25,6 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 50px;
-    color: #fff;
     font-size: 3em;
     text-align: center;
 
@@ -42,7 +44,6 @@ body {
         border-radius: 100%;
         background: url(../images/face.png) center center, url(../images/CenterMark.png) center center;
         background-size: cover;
-        color: #fff;
         position: relative;
 
         .clock-h {
@@ -86,8 +87,7 @@ body {
         .clock-md {
             position: absolute;
             top: 65%;
-            left: 40%;
-            font-family: Helvetica;
+            left: 43%;
             font-size: 1rem;
         }
 
@@ -95,8 +95,9 @@ body {
             position: absolute;
             top: 72%;
             left: 44%;
-            font-family: Helvetica;
             font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
         }
     }
 

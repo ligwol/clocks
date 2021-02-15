@@ -114,7 +114,7 @@ ClockLnd();
 
 function WriteTimeRdJ() {
   var now = new Date();
-  var h = now.getUTCHours() - 3;
+  var h = (now.getUTCHours() - 3) % 24;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
   h = h < 10 ? '0' + h : h;
@@ -150,7 +150,7 @@ ClockRdJ();
 
 function WriteTimeMsc() {
   var now = new Date();
-  var h = now.getUTCHours() + 3;
+  var h = (now.getUTCHours() + 3) % 24;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
   h = h < 10 ? '0' + h : h;
@@ -186,7 +186,7 @@ ClockMsc();
 
 function WriteTimeTky() {
   var now = new Date();
-  var h = now.getUTCHours() + 9;
+  var h = (now.getUTCHours() + 9) % 24;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
   h = h < 10 ? '0' + h : h;
@@ -222,7 +222,7 @@ ClockTky();
 
 function WriteTimeSyd() {
   var now = new Date();
-  var h = now.getUTCHours() + 9;
+  var h = (now.getUTCHours() + 10) % 24;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
   h = h < 10 ? '0' + h : h;
@@ -236,7 +236,7 @@ WriteTimeSyd();
 
 function ClockSyd() {
   var now = new Date();
-  var h = now.getUTCHours() + 9;
+  var h = now.getUTCHours() + 10;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
   var mth = now.getUTCMonth();

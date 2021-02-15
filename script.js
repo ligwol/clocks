@@ -125,7 +125,7 @@ ClockLnd();
 
 function WriteTimeRdJ() {
     let now = new Date();
-    let h = now.getUTCHours()-3;
+    let h = (now.getUTCHours()-3)%24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -163,7 +163,7 @@ ClockRdJ();
 
 function WriteTimeMsc() {
     let now = new Date();
-    let h = now.getUTCHours()+3;
+    let h = (now.getUTCHours() + 3) % 24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -201,7 +201,7 @@ ClockMsc();
 
 function WriteTimeTky() {
     let now = new Date();
-    let h = now.getUTCHours()+9;
+    let h = (now.getUTCHours()+9)%24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -239,7 +239,7 @@ ClockTky();
 
 function WriteTimeSyd() {
     let now = new Date();
-    let h = now.getUTCHours()+9;
+    let h = (now.getUTCHours()+10)%24;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     h = (h < 10) ? '0' + h : h;
@@ -252,7 +252,7 @@ WriteTimeSyd();
 
 function ClockSyd() {
     let now = new Date();
-    let h = now.getUTCHours()+9;
+    let h = now.getUTCHours()+10;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
     let mth = now.getUTCMonth();
