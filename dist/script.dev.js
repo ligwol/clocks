@@ -59,9 +59,26 @@ function ClockNY() {
   var h = now.getUTCHours() - 5;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
-  var mth = now.getUTCMonth();
-  var dt = now.getUTCDate();
-  var dy = now.getUTCDay();
+  var mth, dt, dy;
+
+  if (h >= 24) {
+    dt = now.getUTCDate() + 1;
+    dy = now.getUTCDay() + 1;
+    mth = now.getUTCMonth();
+
+    if (mth < 7) {
+      if (mth % 2 == 0) {
+        mth = mth + 1;
+      }
+    } else if (math %= !0) {
+      mth = mth + 1;
+    }
+  } else {
+    mth = now.getUTCMonth();
+    dt = now.getUTCDate();
+    dy = now.getUTCDay();
+  }
+
   var sAngle = s * 6;
   var mAngle = m * 6;
   var hAngle = h * 30 + m * 0.5;
@@ -95,9 +112,18 @@ function ClockLnd() {
   var h = now.getUTCHours();
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
-  var mth = now.getUTCMonth();
-  var dt = now.getUTCDate();
-  var dy = now.getUTCDay();
+  var mth, dt, dy;
+
+  if (h >= 24) {
+    mth = now.getUTCMonth() + 1;
+    dt = now.getUTCDate() + 1;
+    dy = now.getUTCDay() + 1;
+  } else {
+    mth = now.getUTCMonth();
+    dt = now.getUTCDate();
+    dy = now.getUTCDay();
+  }
+
   var sAngle = s * 6;
   var mAngle = m * 6;
   var hAngle = h * 30 + m * 0.5;
@@ -131,9 +157,26 @@ function ClockRdJ() {
   var h = now.getUTCHours() - 3;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
-  var mth = now.getUTCMonth();
-  var dt = now.getUTCDate();
-  var dy = now.getUTCDay();
+  var mth, dt, dy;
+
+  if (h >= 24) {
+    dt = now.getUTCDate() + 1;
+    dy = now.getUTCDay() + 1;
+    mth = now.getUTCMonth();
+
+    if (mth < 7) {
+      if (mth % 2 == 0) {
+        mth = mth + 1;
+      }
+    } else if (math %= !0) {
+      mth = mth + 1;
+    }
+  } else {
+    mth = now.getUTCMonth();
+    dt = now.getUTCDate();
+    dy = now.getUTCDay();
+  }
+
   var sAngle = s * 6;
   var mAngle = m * 6;
   var hAngle = h * 30 + m * 0.5;
@@ -167,9 +210,26 @@ function ClockMsc() {
   var h = now.getUTCHours() + 3;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
-  var mth = now.getUTCMonth();
-  var dt = now.getUTCDate();
-  var dy = now.getUTCDay();
+  var mth, dt, dy;
+
+  if (h >= 24) {
+    dt = now.getUTCDate() + 1;
+    dy = now.getUTCDay() + 1;
+    mth = now.getUTCMonth();
+
+    if (mth < 7) {
+      if (mth % 2 == 0) {
+        mth = mth + 1;
+      }
+    } else if (math %= !0) {
+      mth = mth + 1;
+    }
+  } else {
+    mth = now.getUTCMonth();
+    dt = now.getUTCDate();
+    dy = now.getUTCDay();
+  }
+
   var sAngle = s * 6;
   var mAngle = m * 6;
   var hAngle = h * 30 + m * 0.5;
@@ -203,9 +263,26 @@ function ClockTky() {
   var h = now.getUTCHours() + 9;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
-  var mth = now.getUTCMonth();
-  var dt = now.getUTCDate();
-  var dy = now.getUTCDay();
+  var mth, dt, dy;
+
+  if (h >= 24) {
+    dt = now.getUTCDate() + 1;
+    dy = now.getUTCDay() + 1;
+    mth = now.getUTCMonth();
+
+    if (mth < 7) {
+      if (mth % 2 == 0) {
+        mth = mth + 1;
+      }
+    } else if (math %= !0) {
+      mth = mth + 1;
+    }
+  } else {
+    mth = now.getUTCMonth();
+    dt = now.getUTCDate();
+    dy = now.getUTCDay();
+  }
+
   var sAngle = s * 6;
   var mAngle = m * 6;
   var hAngle = h * 30 + m * 0.5;
@@ -239,9 +316,26 @@ function ClockSyd() {
   var h = now.getUTCHours() + 10;
   var m = now.getUTCMinutes();
   var s = now.getUTCSeconds();
-  var mth = now.getUTCMonth();
-  var dt = now.getUTCDate();
-  var dy = now.getUTCDay();
+  var mth, dt, dy;
+
+  if (h >= 24) {
+    dt = now.getUTCDate() + 1;
+    dy = now.getUTCDay() + 1;
+    mth = now.getUTCMonth();
+
+    if (mth < 7) {
+      if (mth % 2 == 0) {
+        mth = mth + 1;
+      }
+    } else if (math %= !0) {
+      mth = mth + 1;
+    }
+  } else {
+    mth = now.getUTCMonth();
+    dt = now.getUTCDate();
+    dy = now.getUTCDay();
+  }
+
   var sAngle = s * 6;
   var mAngle = m * 6;
   var hAngle = h * 30 + m * 0.5;

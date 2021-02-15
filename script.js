@@ -64,9 +64,24 @@ function ClockNY() {
     let h = now.getUTCHours()-5;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
-    let mth = now.getUTCMonth();
-    let dt = now.getUTCDate();
-    let dy = now.getUTCDay();
+    let mth, dt, dy;
+    if(h>=24){
+        dt = now.getUTCDate()+1;
+        dy = now.getUTCDay()+1;
+        mth = now.getUTCMonth();
+        if (mth<7){
+            if((mth%2)==0){
+                mth = mth + 1;
+            }
+        } else if(math%=!0){
+            mth = mth + 1;
+        }
+    } else{
+        mth = now.getUTCMonth();
+        dt = now.getUTCDate();
+        dy = now.getUTCDay();
+    }
+    
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
@@ -103,9 +118,16 @@ function ClockLnd() {
     let h = now.getUTCHours();
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
-    let mth = now.getUTCMonth();
-    let dt = now.getUTCDate();
-    let dy = now.getUTCDay();
+    let mth, dt, dy;
+    if(h>=24){
+        mth = now.getUTCMonth()+1;
+        dt = now.getUTCDate()+1;
+        dy = now.getUTCDay()+1;
+    } else{
+        mth = now.getUTCMonth();
+        dt = now.getUTCDate();
+        dy = now.getUTCDay();
+    }
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
@@ -141,9 +163,23 @@ function ClockRdJ() {
     let h = now.getUTCHours()-3;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
-    let mth = now.getUTCMonth();
-    let dt = now.getUTCDate();
-    let dy = now.getUTCDay();
+    let mth, dt, dy;
+    if(h>=24){
+        dt = now.getUTCDate()+1;
+        dy = now.getUTCDay()+1;
+        mth = now.getUTCMonth();
+        if (mth<7){
+            if((mth%2)==0){
+                mth = mth + 1;
+            }
+        } else if(math%=!0){
+            mth = mth + 1;
+        }
+    } else{
+        mth = now.getUTCMonth();
+        dt = now.getUTCDate();
+        dy = now.getUTCDay();
+    }
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
@@ -179,9 +215,23 @@ function ClockMsc() {
     let h = now.getUTCHours()+3;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
-    let mth = now.getUTCMonth();
-    let dt = now.getUTCDate();
-    let dy = now.getUTCDay();
+    let mth, dt, dy;
+    if(h>=24){
+        dt = now.getUTCDate()+1;
+        dy = now.getUTCDay()+1;
+        mth = now.getUTCMonth();
+        if (mth<7){
+            if((mth%2)==0){
+                mth = mth + 1;
+            }
+        } else if(math%=!0){
+            mth = mth + 1;
+        }
+    } else{
+        mth = now.getUTCMonth();
+        dt = now.getUTCDate();
+        dy = now.getUTCDay();
+    }
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
@@ -217,9 +267,23 @@ function ClockTky() {
     let h = now.getUTCHours()+9;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
-    let mth = now.getUTCMonth();
-    let dt = now.getUTCDate();
-    let dy = now.getUTCDay();
+    let mth, dt, dy;
+    if(h>=24){
+        dt = now.getUTCDate()+1;
+        dy = now.getUTCDay()+1;
+        mth = now.getUTCMonth();
+        if (mth<7){
+            if((mth%2)==0){
+                mth = mth + 1;
+            }
+        } else if(math%=!0){
+            mth = mth + 1;
+        }
+    } else{
+        mth = now.getUTCMonth();
+        dt = now.getUTCDate();
+        dy = now.getUTCDay();
+    }
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
@@ -255,9 +319,23 @@ function ClockSyd() {
     let h = now.getUTCHours()+10;
     let m = now.getUTCMinutes();
     let s = now.getUTCSeconds();
-    let mth = now.getUTCMonth();
-    let dt = now.getUTCDate();
-    let dy = now.getUTCDay();
+    let mth, dt, dy;
+    if(h>=24){
+        dt = now.getUTCDate()+1;
+        dy = now.getUTCDay()+1;
+        mth = now.getUTCMonth();
+        if (mth<7){
+            if((mth%2)==0){
+                mth = mth + 1;
+            }
+        } else if(math%=!0){
+            mth = mth + 1;
+        }
+    } else{
+        mth = now.getUTCMonth();
+        dt = now.getUTCDate();
+        dy = now.getUTCDay();
+    }
     let sAngle = s * 6;
     let mAngle = m * 6;
     let hAngle = h * 30 + (m * 0.5);
