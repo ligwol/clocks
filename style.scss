@@ -1,54 +1,34 @@
-$hourHandWidth: 4px;
+$hourHandWidth: 10px;
 $hourHandHeight: 80px;
-$minHandWidth: 3px;
+$minHandWidth: 8px;
 $minHandHeight: 120px;
 $secHandWidth: 3px;
 $secHandHeight: 150px;
-
-@mixin HourHand {
-    
-}
-
-@mixin MinHand {
-    
-}
-
-@mixin SecHand {
-    
-}
-
-@mixin MonthDate {
-    
-}
-
-@mixin WeekDay {
-    
-}
-
-@mixin ClockTemplate {
-    
-}
+$colorBorder: #212121;
+$colorBgc: #f0f0f0;
+$colorCenter: #c91414;
 
 body {
     margin: 0 auto;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: #292929;
+    background-color: $colorBgc;
+    width: 100wh;
 }
 
 .main {
-
+    max-height: 100vh;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 50px;
-    color: #fff;
-    background-color: #292929;
     color: #fff;
     font-size: 3em;
     text-align: center;
 
     .clock-digital {
         margin: 0 auto;
-        margin-top: 20px;
+        padding: 20px;
         padding: 20px;
         width: 300px;
         height: 50px;
@@ -56,65 +36,67 @@ body {
 
     .clock__analogue {
         margin: 0 auto;
-    margin-top: 5px;
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    background: #292929 url(../face.png) center center;
-    background-size: cover;
-    color: #fff;
-    position: relative;
+        padding: 5px;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%;
+        background: url(../images/face.png) center center, url(../images/CenterMark.png) center center;
+        background-size: cover;
+        color: #fff;
+        position: relative;
 
         .clock-h {
             position: absolute;
-                width: $hourHandWidth;
-                height: $hourHandHeight;
-                background-color: #FFA300;
-                top: calc(50% - 75px);
-                left: calc(50% - 2px);
-                transform-origin: 50% 75px;
-                // transform: rotate(30deg);
-            z-index: 3;
+            width: $hourHandWidth;
+            height: $hourHandHeight;
+            background-color: $colorBorder;
+            top: calc(50% - 75px);
+            left: calc(50% - 2px);
+            transform-origin: 50% 75px;
+            border-radius: 30px;
+            // transform: rotate(30deg);
+            z-index: -1;
         }
 
         .clock-m {
             position: absolute;
             width: $minHandWidth;
             height: $minHandHeight;
-            background-color: #FFA300;
+            background-color: $colorBorder;
             top: calc(50% - 100px);
             left: calc(50% - 2px);
             transform-origin: 50% 100px;
+            border-radius: 30px;
             // transform: rotate(60deg);
-            z-index: 2;
+            z-index: -1;
         }
 
         .clock-s {
             position: absolute;
-    width: $secHandWidth;
-    height: $secHandHeight;
-    //background-color: #11111152;
-    top: calc(50% - 130px);
-    left: calc(50% - 2px);
-    transform-origin: 50% 200px;
-    // transform: rotate(100deg);
-    z-index: 3;
+            width: $secHandWidth;
+            height: $secHandHeight;
+            background-color: $colorCenter;
+            top: calc(50% - 130px);
+            left: calc(50% - 2px);
+            transform-origin: 50% 130px;
+            // transform: rotate(100deg);
+            z-index: -1;
         }
 
         .clock-md {
             position: absolute;
-    top: 65%;
-    left: 40%;
-    font-family: Helvetica;
-    font-size: 1rem;
+            top: 65%;
+            left: 40%;
+            font-family: Helvetica;
+            font-size: 1rem;
         }
 
         .clock-d {
             position: absolute;
-    top: 72%;
-    left: 44%;
-    font-family: Helvetica;
-    font-size: 1rem;
+            top: 72%;
+            left: 44%;
+            font-family: Helvetica;
+            font-size: 1rem;
         }
     }
 

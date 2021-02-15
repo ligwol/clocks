@@ -12,8 +12,33 @@ var minutesHandLnd = document.querySelector('#clock-Lnd-m');
 var secondsHandLnd = document.querySelector('#clock-Lnd-s');
 var monthDateLnd = document.querySelector('#clock-Lnd-md');
 var dayLnd = document.querySelector('#clock-Lnd-d');
+var clockRdJ = document.querySelector('#clock-RdJ__digital');
+var hoursHandRdJ = document.querySelector('#clock-RdJ-h');
+var minutesHandRdJ = document.querySelector('#clock-RdJ-m');
+var secondsHandRdJ = document.querySelector('#clock-RdJ-s');
+var monthDateRdJ = document.querySelector('#clock-RdJ-md');
+var dayRdJ = document.querySelector('#clock-RdJ-d');
+var clockMsc = document.querySelector('#clock-Msc__digital');
+var hoursHandMsc = document.querySelector('#clock-Msc-h');
+var minutesHandMsc = document.querySelector('#clock-Msc-m');
+var secondsHandMsc = document.querySelector('#clock-Msc-s');
+var monthDateMsc = document.querySelector('#clock-Msc-md');
+var dayMsc = document.querySelector('#clock-Msc-d');
+var clockTky = document.querySelector('#clock-Tky__digital');
+var hoursHandTky = document.querySelector('#clock-Tky-h');
+var minutesHandTky = document.querySelector('#clock-Tky-m');
+var secondsHandTky = document.querySelector('#clock-Tky-s');
+var monthDateTky = document.querySelector('#clock-Tky-md');
+var dayTky = document.querySelector('#clock-Tky-d');
+var clockSyd = document.querySelector('#clock-Syd__digital');
+var hoursHandSyd = document.querySelector('#clock-Syd-h');
+var minutesHandSyd = document.querySelector('#clock-Syd-m');
+var secondsHandSyd = document.querySelector('#clock-Syd-s');
+var monthDateSyd = document.querySelector('#clock-Syd-md');
+var daySyd = document.querySelector('#clock-Syd-d');
 var monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 var DaysArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+/******NewYork******/
 
 function WriteTimeNY() {
   var now = new Date();
@@ -49,6 +74,7 @@ function ClockNY() {
 }
 
 ClockNY();
+/******LONDON******/
 
 function WriteTimeLnd() {
   var now = new Date();
@@ -84,3 +110,147 @@ function ClockLnd() {
 }
 
 ClockLnd();
+/******Rio de Janeiro******/
+
+function WriteTimeRdJ() {
+  var now = new Date();
+  var h = now.getUTCHours() - 3;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  s = s < 10 ? '0' + s : s;
+  clockRdJ.textContent = "".concat(h, " : ").concat(m, " : ").concat(s);
+  setTimeout(WriteTimeRdJ, 500);
+}
+
+WriteTimeRdJ();
+
+function ClockRdJ() {
+  var now = new Date();
+  var h = now.getUTCHours() - 3;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  var mth = now.getUTCMonth();
+  var dt = now.getUTCDate();
+  var dy = now.getUTCDay();
+  var sAngle = s * 6;
+  var mAngle = m * 6;
+  var hAngle = h * 30 + m * 0.5;
+  secondsHandRdJ.style.transform = "rotate(".concat(sAngle, "deg)");
+  minutesHandRdJ.style.transform = "rotate(".concat(mAngle, "deg)");
+  hoursHandRdJ.style.transform = "rotate(".concat(hAngle, "deg)");
+  monthDateRdJ.textContent = "".concat(monthsArray[mth], " ").concat(dt);
+  dayRdJ.textContent = "".concat(DaysArray[dy]);
+  setTimeout(ClockRdJ, 500);
+}
+
+ClockRdJ();
+/******Moscow******/
+
+function WriteTimeMsc() {
+  var now = new Date();
+  var h = now.getUTCHours() + 3;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  s = s < 10 ? '0' + s : s;
+  clockMsc.textContent = "".concat(h, " : ").concat(m, " : ").concat(s);
+  setTimeout(WriteTimeMsc, 500);
+}
+
+WriteTimeMsc();
+
+function ClockMsc() {
+  var now = new Date();
+  var h = now.getUTCHours() + 3;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  var mth = now.getUTCMonth();
+  var dt = now.getUTCDate();
+  var dy = now.getUTCDay();
+  var sAngle = s * 6;
+  var mAngle = m * 6;
+  var hAngle = h * 30 + m * 0.5;
+  secondsHandMsc.style.transform = "rotate(".concat(sAngle, "deg)");
+  minutesHandMsc.style.transform = "rotate(".concat(mAngle, "deg)");
+  hoursHandMsc.style.transform = "rotate(".concat(hAngle, "deg)");
+  monthDateMsc.textContent = "".concat(monthsArray[mth], " ").concat(dt);
+  dayMsc.textContent = "".concat(DaysArray[dy]);
+  setTimeout(ClockMsc, 500);
+}
+
+ClockMsc();
+/******Tokyo******/
+
+function WriteTimeTky() {
+  var now = new Date();
+  var h = now.getUTCHours() + 9;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  s = s < 10 ? '0' + s : s;
+  clockTky.textContent = "".concat(h, " : ").concat(m, " : ").concat(s);
+  setTimeout(WriteTimeTky, 500);
+}
+
+WriteTimeTky();
+
+function ClockTky() {
+  var now = new Date();
+  var h = now.getUTCHours() + 9;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  var mth = now.getUTCMonth();
+  var dt = now.getUTCDate();
+  var dy = now.getUTCDay();
+  var sAngle = s * 6;
+  var mAngle = m * 6;
+  var hAngle = h * 30 + m * 0.5;
+  secondsHandTky.style.transform = "rotate(".concat(sAngle, "deg)");
+  minutesHandTky.style.transform = "rotate(".concat(mAngle, "deg)");
+  hoursHandTky.style.transform = "rotate(".concat(hAngle, "deg)");
+  monthDateTky.textContent = "".concat(monthsArray[mth], " ").concat(dt);
+  dayTky.textContent = "".concat(DaysArray[dy]);
+  setTimeout(ClockTky, 500);
+}
+
+ClockTky();
+/******Sydney******/
+
+function WriteTimeSyd() {
+  var now = new Date();
+  var h = now.getUTCHours() + 9;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  h = h < 10 ? '0' + h : h;
+  m = m < 10 ? '0' + m : m;
+  s = s < 10 ? '0' + s : s;
+  clockSyd.textContent = "".concat(h, " : ").concat(m, " : ").concat(s);
+  setTimeout(WriteTimeSyd, 500);
+}
+
+WriteTimeSyd();
+
+function ClockSyd() {
+  var now = new Date();
+  var h = now.getUTCHours() + 9;
+  var m = now.getUTCMinutes();
+  var s = now.getUTCSeconds();
+  var mth = now.getUTCMonth();
+  var dt = now.getUTCDate();
+  var dy = now.getUTCDay();
+  var sAngle = s * 6;
+  var mAngle = m * 6;
+  var hAngle = h * 30 + m * 0.5;
+  secondsHandSyd.style.transform = "rotate(".concat(sAngle, "deg)");
+  minutesHandSyd.style.transform = "rotate(".concat(mAngle, "deg)");
+  hoursHandSyd.style.transform = "rotate(".concat(hAngle, "deg)");
+  monthDateSyd.textContent = "".concat(monthsArray[mth], " ").concat(dt);
+  daySyd.textContent = "".concat(DaysArray[dy]);
+  setTimeout(ClockSyd, 500);
+}
+
+ClockSyd();
