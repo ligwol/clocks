@@ -57,6 +57,18 @@ $secHandHeight: 150px;
     font-size: 1rem;
 }
 
+@mixin ClockTemplate {
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: #292929 url(../face.png) center center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+}
+
 body {
     margin: 0 auto;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
@@ -83,15 +95,8 @@ body {
     }
 
     #clock-NY__analogue {
-        margin: 0 auto;
-        margin-top: 5px;
-        width: 300px;
-        height: 300px;
-        border-radius: 100%;
-        background: #292929 url(/face.png) center center;
-        background-size: cover;
-        color: #fff;
-        position: relative;
+
+        @include ClockTemplate;
 
         .clock-NY-h {
             @include HourHand;
@@ -123,15 +128,7 @@ body {
     }
 
     #clock-Lnd__analogue {
-        margin: 0 auto;
-        margin-top: 20px;
-        width: 300px;
-        height: 300px;
-        border-radius: 100%;
-        background: #292929 url(/face.png) center center;
-        background-size: cover;
-        color: #fff;
-        position: relative;
+        @include ClockTemplate;
 
         .clock-Lnd-h {
             @include HourHand;

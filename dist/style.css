@@ -27,7 +27,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 100%;
-  background: #292929 url(/face.png) center center;
+  background: #292929 url(../face.png) center center;
   background-size: cover;
   color: #fff;
   position: relative;
@@ -84,11 +84,11 @@ body {
 }
 .main #clock-Lnd__analogue {
   margin: 0 auto;
-  margin-top: 20px;
+  margin-top: 5px;
   width: 300px;
   height: 300px;
   border-radius: 100%;
-  background: #292929 url(/face.png) center center;
+  background: #292929 url(../face.png) center center;
   background-size: cover;
   color: #fff;
   position: relative;
