@@ -1,17 +1,17 @@
 "use strict";
 
 var clockNY = document.querySelector('#clock-NY__digital');
-var hoursHandNY = document.querySelector('.clock-NY-h');
-var minutesHandNY = document.querySelector('.clock-NY-m');
-var secondsHandNY = document.querySelector('.clock-NY-s');
-var monthDateNY = document.querySelector('.clock-NY-md');
-var dayNY = document.querySelector('.clock-NY-d');
+var hoursHandNY = document.querySelector('#clock-NY-h');
+var minutesHandNY = document.querySelector('#clock-NY-m');
+var secondsHandNY = document.querySelector('#clock-NY-s');
+var monthDateNY = document.querySelector('#clock-NY-md');
+var dayNY = document.querySelector('#clock-NY-d');
 var clockLnd = document.querySelector('#clock-Lnd__digital');
-var hoursHandLnd = document.querySelector('.clock-Lnd-h');
-var minutesHandLnd = document.querySelector('.clock-Lnd-m');
-var secondsHandLnd = document.querySelector('.clock-Lnd-s');
-var monthDateLnd = document.querySelector('.clock-Lnd-md');
-var dayLnd = document.querySelector('.clock-Lnd-d');
+var hoursHandLnd = document.querySelector('#clock-Lnd-h');
+var minutesHandLnd = document.querySelector('#clock-Lnd-m');
+var secondsHandLnd = document.querySelector('#clock-Lnd-s');
+var monthDateLnd = document.querySelector('#clock-Lnd-md');
+var dayLnd = document.querySelector('#clock-Lnd-d');
 var monthsArray = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 var DaysArray = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 

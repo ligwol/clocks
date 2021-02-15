@@ -14,14 +14,14 @@ body {
   font-size: 3em;
   text-align: center;
 }
-.main #clock-NY__digital {
+.main .clock-digital {
   margin: 0 auto;
   margin-top: 20px;
   padding: 20px;
   width: 300px;
   height: 50px;
 }
-.main #clock-NY__analogue {
+.main .clock__analogue {
   margin: 0 auto;
   margin-top: 5px;
   width: 300px;
@@ -32,7 +32,7 @@ body {
   color: #fff;
   position: relative;
 }
-.main #clock-NY__analogue .clock-NY-h {
+.main .clock__analogue .clock-h {
   position: absolute;
   width: 4px;
   height: 80px;
@@ -42,7 +42,7 @@ body {
   transform-origin: 50% 75px;
   z-index: 3;
 }
-.main #clock-NY__analogue .clock-NY-m {
+.main .clock__analogue .clock-m {
   position: absolute;
   width: 3px;
   height: 120px;
@@ -52,7 +52,7 @@ body {
   transform-origin: 50% 100px;
   z-index: 2;
 }
-.main #clock-NY__analogue .clock-NY-s {
+.main .clock__analogue .clock-s {
   position: absolute;
   width: 3px;
   height: 150px;
@@ -61,75 +61,14 @@ body {
   transform-origin: 50% 200px;
   z-index: 3;
 }
-.main #clock-NY__analogue .clock-NY-md {
+.main .clock__analogue .clock-md {
   position: absolute;
   top: 65%;
   left: 40%;
   font-family: Helvetica;
   font-size: 1rem;
 }
-.main #clock-NY__analogue .clock-NY-d {
-  position: absolute;
-  top: 72%;
-  left: 44%;
-  font-family: Helvetica;
-  font-size: 1rem;
-}
-.main #clock-Lnd__digital {
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 20px;
-  width: 300px;
-  height: 50px;
-}
-.main #clock-Lnd__analogue {
-  margin: 0 auto;
-  margin-top: 5px;
-  width: 300px;
-  height: 300px;
-  border-radius: 100%;
-  background: #292929 url(../face.png) center center;
-  background-size: cover;
-  color: #fff;
-  position: relative;
-}
-.main #clock-Lnd__analogue .clock-Lnd-h {
-  position: absolute;
-  width: 4px;
-  height: 80px;
-  background-color: #FFA300;
-  top: calc(50% - 75px);
-  left: calc(50% - 2px);
-  transform-origin: 50% 75px;
-  z-index: 3;
-}
-.main #clock-Lnd__analogue .clock-Lnd-m {
-  position: absolute;
-  width: 3px;
-  height: 120px;
-  background-color: #FFA300;
-  top: calc(50% - 100px);
-  left: calc(50% - 2px);
-  transform-origin: 50% 100px;
-  z-index: 2;
-}
-.main #clock-Lnd__analogue .clock-Lnd-s {
-  position: absolute;
-  width: 3px;
-  height: 150px;
-  top: calc(50% - 130px);
-  left: calc(50% - 2px);
-  transform-origin: 50% 200px;
-  z-index: 3;
-}
-.main #clock-Lnd__analogue .clock-Lnd-md {
-  position: absolute;
-  top: 65%;
-  left: 40%;
-  font-family: Helvetica;
-  font-size: 1rem;
-}
-.main #clock-Lnd__analogue .clock-Lnd-d {
+.main .clock__analogue .clock-d {
   position: absolute;
   top: 72%;
   left: 44%;

@@ -6,67 +6,27 @@ $secHandWidth: 3px;
 $secHandHeight: 150px;
 
 @mixin HourHand {
-    position: absolute;
-    width: $hourHandWidth;
-    height: $hourHandHeight;
-    background-color: #FFA300;
-    top: calc(50% - 75px);
-    left: calc(50% - 2px);
-    transform-origin: 50% 75px;
-    // transform: rotate(30deg);
-    z-index: 3;
+    
 }
 
 @mixin MinHand {
-    position: absolute;
-    width: $minHandWidth;
-    height: $minHandHeight;
-    background-color: #FFA300;
-    top: calc(50% - 100px);
-    left: calc(50% - 2px);
-    transform-origin: 50% 100px;
-    // transform: rotate(60deg);
-    z-index: 2;
+    
 }
 
 @mixin SecHand {
-    position: absolute;
-    width: $secHandWidth;
-    height: $secHandHeight;
-    //background-color: #11111152;
-    top: calc(50% - 130px);
-    left: calc(50% - 2px);
-    transform-origin: 50% 200px;
-    // transform: rotate(100deg);
-    z-index: 3;
+    
 }
 
 @mixin MonthDate {
-    position: absolute;
-    top: 65%;
-    left: 40%;
-    font-family: Helvetica;
-    font-size: 1rem;
+    
 }
 
 @mixin WeekDay {
-    position: absolute;
-    top: 72%;
-    left: 44%;
-    font-family: Helvetica;
-    font-size: 1rem;
+    
 }
 
 @mixin ClockTemplate {
-    margin: 0 auto;
-    margin-top: 5px;
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    background: #292929 url(../face.png) center center;
-    background-size: cover;
-    color: #fff;
-    position: relative;
+    
 }
 
 body {
@@ -86,7 +46,7 @@ body {
     font-size: 3em;
     text-align: center;
 
-    #clock-NY__digital {
+    .clock-digital {
         margin: 0 auto;
         margin-top: 20px;
         padding: 20px;
@@ -94,60 +54,68 @@ body {
         height: 50px;
     }
 
-    #clock-NY__analogue {
-
-        @include ClockTemplate;
-
-        .clock-NY-h {
-            @include HourHand;
-        }
-
-        .clock-NY-m {
-            @include MinHand;
-        }
-
-        .clock-NY-s {
-            @include SecHand;
-        }
-
-        .clock-NY-md {
-            @include MonthDate;
-        }
-
-        .clock-NY-d {
-            @include WeekDay;
-        }
-    }
-
-    #clock-Lnd__digital {
+    .clock__analogue {
         margin: 0 auto;
-        margin-top: 20px;
-        padding: 20px;
-        width: 300px;
-        height: 50px;
+    margin-top: 5px;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    background: #292929 url(../face.png) center center;
+    background-size: cover;
+    color: #fff;
+    position: relative;
+
+        .clock-h {
+            position: absolute;
+                width: $hourHandWidth;
+                height: $hourHandHeight;
+                background-color: #FFA300;
+                top: calc(50% - 75px);
+                left: calc(50% - 2px);
+                transform-origin: 50% 75px;
+                // transform: rotate(30deg);
+            z-index: 3;
+        }
+
+        .clock-m {
+            position: absolute;
+            width: $minHandWidth;
+            height: $minHandHeight;
+            background-color: #FFA300;
+            top: calc(50% - 100px);
+            left: calc(50% - 2px);
+            transform-origin: 50% 100px;
+            // transform: rotate(60deg);
+            z-index: 2;
+        }
+
+        .clock-s {
+            position: absolute;
+    width: $secHandWidth;
+    height: $secHandHeight;
+    //background-color: #11111152;
+    top: calc(50% - 130px);
+    left: calc(50% - 2px);
+    transform-origin: 50% 200px;
+    // transform: rotate(100deg);
+    z-index: 3;
+        }
+
+        .clock-md {
+            position: absolute;
+    top: 65%;
+    left: 40%;
+    font-family: Helvetica;
+    font-size: 1rem;
+        }
+
+        .clock-d {
+            position: absolute;
+    top: 72%;
+    left: 44%;
+    font-family: Helvetica;
+    font-size: 1rem;
+        }
     }
 
-    #clock-Lnd__analogue {
-        @include ClockTemplate;
-
-        .clock-Lnd-h {
-            @include HourHand;
-        }
-
-        .clock-Lnd-m {
-            @include MinHand;
-        }
-
-        .clock-Lnd-s {
-            @include SecHand;
-        }
-
-        .clock-Lnd-md {
-            @include MonthDate;
-        }
-
-        .clock-Lnd-d {
-            @include WeekDay;
-        }
-    }
 }

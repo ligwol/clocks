@@ -1,16 +1,16 @@
 const clockNY = document.querySelector('#clock-NY__digital');
-const hoursHandNY = document.querySelector('.clock-NY-h');
-const minutesHandNY = document.querySelector('.clock-NY-m');
-const secondsHandNY = document.querySelector('.clock-NY-s');
-const monthDateNY = document.querySelector('.clock-NY-md');
-const dayNY = document.querySelector('.clock-NY-d');
+const hoursHandNY = document.querySelector('#clock-NY-h');
+const minutesHandNY = document.querySelector('#clock-NY-m');
+const secondsHandNY = document.querySelector('#clock-NY-s');
+const monthDateNY = document.querySelector('#clock-NY-md');
+const dayNY = document.querySelector('#clock-NY-d');
 
 const clockLnd = document.querySelector('#clock-Lnd__digital');
-const hoursHandLnd = document.querySelector('.clock-Lnd-h');
-const minutesHandLnd = document.querySelector('.clock-Lnd-m');
-const secondsHandLnd = document.querySelector('.clock-Lnd-s');
-const monthDateLnd = document.querySelector('.clock-Lnd-md');
-const dayLnd = document.querySelector('.clock-Lnd-d');
+const hoursHandLnd = document.querySelector('#clock-Lnd-h');
+const minutesHandLnd = document.querySelector('#clock-Lnd-m');
+const secondsHandLnd = document.querySelector('#clock-Lnd-s');
+const monthDateLnd = document.querySelector('#clock-Lnd-md');
+const dayLnd = document.querySelector('#clock-Lnd-d');
 
 
 
