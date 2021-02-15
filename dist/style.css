@@ -1,73 +1,138 @@
 body {
   margin: 0 auto;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: #c4c4c4;
+  background-color: #292929;
 }
 
-#clock-1 {
+.main {
+  display: flex;
+  flex-direction: row;
+  margin: 50px;
+  color: #fff;
+  background-color: #292929;
+  color: #fff;
+  font-size: 3em;
+  text-align: center;
+}
+.main #clock-NY__digital {
   margin: 0 auto;
   margin-top: 20px;
   padding: 20px;
-  width: 500px;
-  height: 100px;
-  background-color: #fff;
-  font-size: 5em;
-  text-align: center;
-  border-radius: 30px;
+  width: 300px;
+  height: 50px;
 }
-
-#clock-2 {
+.main #clock-NY__analogue {
   margin: 0 auto;
-  margin-top: 20px;
-  width: 500px;
-  height: 500px;
+  margin-top: 5px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
-  background: #fff url(/face.png) center center;
+  background: #292929 url(/face.png) center center;
   background-size: cover;
-  box-shadow: 0px 1px 5px 5px rgba(0, 0, 0, 0.1);
+  color: #fff;
   position: relative;
 }
-#clock-2 .clock-h {
+.main #clock-NY__analogue .clock-NY-h {
   position: absolute;
-  width: 8px;
-  height: 120px;
-  background-color: #111111;
-  top: calc(50% - 100px);
-  left: calc(50% - 4px);
-  transform-origin: 50% 100px;
+  width: 4px;
+  height: 80px;
+  background-color: #FFA300;
+  top: calc(50% - 75px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 75px;
   z-index: 3;
 }
-#clock-2 .clock-m {
-  position: absolute;
-  width: 5px;
-  height: 180px;
-  background-color: #111;
-  top: calc(50% - 160px);
-  left: calc(50% - 3px);
-  transform-origin: 50% 160px;
-  z-index: 2;
-}
-#clock-2 .clock-s {
+.main #clock-NY__analogue .clock-NY-m {
   position: absolute;
   width: 3px;
-  height: 220px;
-  background-color: #11111152;
-  top: calc(50% - 200px);
+  height: 120px;
+  background-color: #FFA300;
+  top: calc(50% - 100px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 100px;
+  z-index: 2;
+}
+.main #clock-NY__analogue .clock-NY-s {
+  position: absolute;
+  width: 3px;
+  height: 150px;
+  top: calc(50% - 130px);
   left: calc(50% - 2px);
   transform-origin: 50% 200px;
   z-index: 3;
 }
-#clock-2 .clock-md {
+.main #clock-NY__analogue .clock-NY-md {
   position: absolute;
   top: 65%;
   left: 40%;
   font-family: Helvetica;
-  font-size: 2rem;
+  font-size: 1rem;
 }
-#clock-2 .clock-d {
+.main #clock-NY__analogue .clock-NY-d {
   position: absolute;
   top: 72%;
   left: 44%;
   font-family: Helvetica;
-  font-size: 2rem;
+  font-size: 1rem;
+}
+.main #clock-Lnd__digital {
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 20px;
+  width: 300px;
+  height: 50px;
+}
+.main #clock-Lnd__analogue {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  background: #292929 url(/face.png) center center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+}
+.main #clock-Lnd__analogue .clock-Lnd-h {
+  position: absolute;
+  width: 4px;
+  height: 80px;
+  background-color: #FFA300;
+  top: calc(50% - 75px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 75px;
+  z-index: 3;
+}
+.main #clock-Lnd__analogue .clock-Lnd-m {
+  position: absolute;
+  width: 3px;
+  height: 120px;
+  background-color: #FFA300;
+  top: calc(50% - 100px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 100px;
+  z-index: 2;
+}
+.main #clock-Lnd__analogue .clock-Lnd-s {
+  position: absolute;
+  width: 3px;
+  height: 150px;
+  top: calc(50% - 130px);
+  left: calc(50% - 2px);
+  transform-origin: 50% 200px;
+  z-index: 3;
+}
+.main #clock-Lnd__analogue .clock-Lnd-md {
+  position: absolute;
+  top: 65%;
+  left: 40%;
+  font-family: Helvetica;
+  font-size: 1rem;
+}
+.main #clock-Lnd__analogue .clock-Lnd-d {
+  position: absolute;
+  top: 72%;
+  left: 44%;
+  font-family: Helvetica;
+  font-size: 1rem;
 }
